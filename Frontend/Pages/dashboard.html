@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Hub</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>HTML Learning Hub</h1>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search videos...">
+        </div>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <h2>HTML Videos</h2>
+
+            <ul class="video-list" id="video-list"></ul>
+
+        </aside>
+
+        <main class="content">
+
+         
+            <section class="progress-section">
+
+                <h2>Your Progress</h2>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <p>0 / 50 Videos Completed</p>
+
+            </section>
+
+     
+            <section class="video-content">
+
+                <h2 id="video-title">
+                    Select a Video
+                </h2>
+
+                <div class="notes">
+
+                    <h3>Notes</h3>
+
+                    <p id="video-notes">
+                        Click any video from the left panel to view its content.
+                    </p>
+
+                </div>
+
+                <div class="code-example">
+
+                    <h3>Code Example</h3>
+
+                    <pre id="video-code">
+                        &lt;h1&gt;Hello World&lt;/h1&gt;
+                    </pre>
+
+                </div>
+
+                <div class="output-section">
+
+                    <h3>Output</h3>
+
+                    <div id="video-output">
+
+                        <img
+                            id="output-image"
+                            src=""
+                            alt="Output Screenshot"
+                            style="max-width:100%; display:none; border-radius:10px;"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="complete-section">
+
+                    <label>
+                        <input type="checkbox" id="complete-checkbox">
+                        Mark as Completed
+                    </label>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/video.js"></script>
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>
