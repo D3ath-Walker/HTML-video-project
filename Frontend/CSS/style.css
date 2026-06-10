@@ -27,15 +27,11 @@ body{
 .form-box{
     width: 450px;
     padding: 40px;
-
     background: rgba(255, 255, 255, 0.15);
-
     backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255,255,255,0.2);
-
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-color: #000000;
     border-radius: 20px;
-
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
@@ -71,7 +67,7 @@ input{
 
 input:hover{
     background: #8cfd84;
-    transition: 1.0s;
+    transition: 0.5s;
 }
 
 input:focus{
@@ -95,5 +91,5 @@ button{
 
 button:hover{
     background: #16307a;
-    transition: 1.0s;
+    transition: 0.5s;
 }
