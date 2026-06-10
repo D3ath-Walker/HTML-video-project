@@ -12,5 +12,5 @@ form.addEventListener("submit", function(event){
     localStorage.setItem("course", course);
     localStorage.setItem("college", college);
 
-    window.location.href = "/Frontend/Pages/dashboard.html";
+    window.location.href = "./Frontend/Pages/dashboard.html";
 });
