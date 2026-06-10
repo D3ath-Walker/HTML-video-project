@@ -10,7 +10,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f3f4f6;
+    background-image: url("../img/lib.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container{
@@ -23,22 +26,29 @@ body{
 
 .form-box{
     width: 450px;
-    background: white;
     padding: 40px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
 .form-box h1{
     text-align: center;
-    color: #1e3a8a;
+    color: #e8c04b;
     margin-bottom: 10px;
     font-size: 2rem;
 }
 
 .form-box p{
     text-align: center;
-    color: #666;
+    color: white;
     margin-bottom: 30px;
 }
 
@@ -47,6 +57,7 @@ label{
     margin-bottom: 8px;
     margin-top: 15px;
     font-weight: bold;
+    color: whitesmoke;
 }
 
 input{
@@ -58,8 +69,13 @@ input{
     font-size: 15px;
 }
 
+input:hover{
+    background: #8cfd84;
+    transition: 1.0s;
+}
+
 input:focus{
-    border-color: #1e3a8a;
+    border-color: #000000;
 }
 
 button{
@@ -68,7 +84,7 @@ button{
     margin-top: 25px;
     border: none;
     border-radius: 10px;
-    background: #1e3a8a;
+    background: #e8c04b;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -76,6 +92,8 @@ button{
     transition: 0.3s;
 }
 
+
 button:hover{
     background: #16307a;
+    transition: 1.0s;
 }
