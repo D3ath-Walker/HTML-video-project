@@ -135,7 +135,8 @@ const videos = {
                 <code> desplay text as a code
                 `,
 
-        code:  `<h1>ChiPi Technologies Private Limited</h1>
+        code:  `
+                <h1>ChiPi Technologies Private Limited</h1>
                 <h2>Empowering Future Engineers</h2>
                 <h3>Online Training and Real-time Projects</h3>
                 <h4>Courses: Web Development, Java, Python</h4>
@@ -189,7 +190,8 @@ const videos = {
                 it will display <ul> ,which we can't display normally if we write <ul> directly as the vs code will start using it and not display it as a text .
                 `,
 
-        code: `<p>
+        code: `
+                <p>
                     In HTML, both <code>&lt;ul&gt;</code> (unordered list) and
                     <code>&lt;ol&gt;</code> (ordered list) are used to display lists.
                     The main difference is that:
@@ -248,7 +250,8 @@ const videos = {
                 there are a lot of them.
                 `,
 
-        code:  `<h3>&lt;html&gt; Tag</h3>
+        code:  `
+                <h3>&lt;html&gt; Tag</h3>
                 <p>
                     The <code>&lt;html&gt;</code> tag is the root of an HTML document.
                     It wraps the entire web page code.
@@ -288,7 +291,8 @@ const videos = {
                 * "i" - lowercase roman
                 `,
 
-        code:  `<h2>Ordered List Styles</h2>
+        code:  `
+                <h2>Ordered List Styles</h2>
 
                 <h3>type="1" (Default - Numbers)</h3>
                 <ol type="1">
@@ -360,7 +364,8 @@ const videos = {
                 another tag is <rel> which is related to security.
                 `,
 
-        code: `<p>
+        code: `
+                <p>
                     <a href="http://chipitechnologies.com/">
                         ChiPi Technologies Private Limited
                     </a>
@@ -437,7 +442,8 @@ const videos = {
                 <section> – Represents a thematic section of content, usually with its own heading.
                 `,
 
-        code: `<header>
+        code: `
+                <header>
                     <h1>ChiPi Technologies Private Limited</h1>
 
                     <p>
@@ -467,7 +473,8 @@ const videos = {
                 <nav> – Defines a navigation section that contains links to other pages or sections of the website.
                 `,
 
-        code: ` <nav>
+        code: ` 
+                <nav>
                     <p>
                         The <code>&lt;nav&gt;</code> tag is used to define a block of navigation links.
                     </p>
@@ -529,7 +536,8 @@ const videos = {
                 <sup> – Displays text as superscript (raised text), such as exponents or footnotes.
                 `,
 
-        code:  `<h2>1. Anchor Tag (&lt;a&gt;)</h2>
+        code:  `
+                <h2>1. Anchor Tag (&lt;a&gt;)</h2>
                 <p>
                     Visit
                     <a href="https://www.google.com" target="_blank">
@@ -584,7 +592,8 @@ const videos = {
                 <time> – Represents a specific date or time in a machine-readable format and helps with SEO and accessibility.
                 `,
 
-        code: ` <h2>Subscript Tag (&lt;sub&gt;)</h2>
+        code: ` 
+                <h2>Subscript Tag (&lt;sub&gt;)</h2>
 
                 <p>
                     Water Formula: H<sub>2</sub>O
@@ -620,7 +629,8 @@ const videos = {
                 id is an attribute used in div tag which is very imp for css.
                 `,
 
-        code: `<div>
+        code: `
+                <div>
                     <h1>Abbreviation Examples</h1>
 
                     <p>
@@ -653,7 +663,8 @@ const videos = {
                 we use title in this to do it.
                 `,
 
-        code: ` <p>
+        code: ` 
+                <p>
                     <abbr title="HyperText Markup Language">HTML</abbr>
                     is used to create web pages.
                 </p>
@@ -679,7 +690,8 @@ const videos = {
                 we can use an property name as alt in those tag in case if any img, video,or audio not loaded it will show to that alt text.
                 `,
 
-        code: `<div>
+        code: `
+                <div>
                     <h2>Image Tag (&lt;img&gt;)</h2>
 
                     <img src="nature.jpg"
@@ -719,7 +731,8 @@ const videos = {
                 <td> – Defines a table data cell.
                 `,
 
-        code: `<table border="1">
+        code: `
+                <table border="1">
     
                 <tr>
                     <th>Name</th>
@@ -748,7 +761,8 @@ const videos = {
         title: "Complete HTML Tutorial - TH tag, table header",
         notes: `<th> this tag means table header. it tell us the head of the table ,its a important tag of a table.
                 `,
-        code: `<table border="1">
+        code: `
+                <table border="1">
     
                 <tr>
                     <th>Name</th>
@@ -786,7 +800,8 @@ const videos = {
                 <colgroup> - it make the columns in a group uses a property <col> to  use other property like span and style to add colors.
                 `,
 
-        code: `<table border="1" width="500" height="150">
+        code: `
+                <table border="1" width="500" height="150">
 
                     <caption>Student Information</caption>
 
@@ -820,6 +835,7 @@ const videos = {
                     </tfoot>
 
                 </table>`,
+
         image: "../img/html 23.1.png"
     },
 
@@ -830,7 +846,8 @@ const videos = {
                 Values are usually given in pixels (px) when using HTML attributes but it can also be given in % too.
                 `,
 
-        code: `<table border="1" width="500" height="150">
+        code: `
+                <table border="1" width="500" height="150">
 
                     <caption>Student Information</caption>
 
@@ -864,6 +881,7 @@ const videos = {
                     </tfoot>
 
                 </table>`,
+
         image: "../img/html 24.1.png"
     },
 
@@ -893,7 +911,8 @@ const videos = {
                 when u assign a height to a table and not declare it then html automatically fix the height ,normally giving it to the largest row.
                 `,
 
-        code: `<table border="1" width="100%" height="600">
+        code: `
+                <table border="1" width="100%" height="600">
 
                     <tr height="60">
                         <td colspan="2" align="center">
@@ -946,13 +965,15 @@ const videos = {
                     </tr>
 
                 </table>`,
+
         image: "../img/html 27.3.png"
     },
 
     28: {
         title: "HTML Tutorial - Create a Real-life Web Page Layout 2 - Table - ChiPi Technologies",
         notes: "no notes for this video",
-        code: `<!DOCTYPE html>
+        code: `
+                <!DOCTYPE html>
                 <html>
                 <head>
                     <title>Semantic Layout</title>
@@ -1030,7 +1051,8 @@ const videos = {
     29: {
         title: "HTML Tutorial - Create a Real-life Web Page Layout 3 - Table - ChiPi Technologies",
         notes: "no notes for this video",
-        code: `<!DOCTYPE html>
+        code: `
+                <!DOCTYPE html>
                 <html>
                 <head>
                     <title>Web Page Layout</title>
@@ -1084,13 +1106,15 @@ const videos = {
 
                 </body>
                 </html>`,
+
         image: "../img/html 29.2.png"
     },
 
     30: {
         title: "Complete HTML Tutorial - Create a Real-life Web Page Layout 4 - Table - ChiPi Technologies",
         notes: `no notes for this video`,
-        code: `<!DOCTYPE html>
+        code: `
+                <!DOCTYPE html>
                 <html>
                 <head>
                     <title>Student Dashboard Layout</title>
@@ -1158,6 +1182,7 @@ const videos = {
 
                 </body>
                 </html>`,
+
         image: "../img/html 30.2.png"
     },
 
@@ -1170,7 +1195,8 @@ const videos = {
                 it just define that a list is making ,its not like ordered list or unordered list. it give a bit or indenting to the <dd>.
                 `,
 
-        code: ` <dl>
+        code: ` 
+                <dl>
 
                     <dt>HTML</dt>
                     <dd>
@@ -1198,6 +1224,7 @@ const videos = {
                     </dd>
 
                 </dl>`,
+
         image: "../img/html 31.4.png"
     },
 
@@ -1222,7 +1249,8 @@ const videos = {
                 All those input, textarea , button tags are must be inside form tag.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <br>
                     <br>
@@ -1252,6 +1280,7 @@ const videos = {
                     <input type="submit" value="Save">
 
                 </form>`,
+
         image: "../img/html 32.1.png"
     },
 
@@ -1262,7 +1291,8 @@ const videos = {
                 <input type="button"> – Creates a clickable button that performs an action, usually with JavaScript.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <!-- Radio Buttons -->
 
@@ -1357,7 +1387,8 @@ const videos = {
         notes: `<input type="color"> - element display a color picker, allowing users to select a color which is submitted as a hexadecimal value.
                `,
 
-        code: `<body>
+        code: `
+                <body>
 
                     <h2>Select a Color</h2>
 
@@ -1374,7 +1405,8 @@ const videos = {
                 <input type="date"> – Provides a calendar-based date picker for selecting a date.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
                     Password:
                     <input type="password">
                     <br><br>
@@ -1405,7 +1437,8 @@ const videos = {
                 The cols attribute sets the width (number of characters).
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <label for="feedback">Your Feedback:</label>
                     <br>
@@ -1417,6 +1450,7 @@ const videos = {
                     <input type="submit" value="Submit">
 
                 </form>`,
+
         image: "../img/html 36.2.png"
     },
 
@@ -1428,7 +1462,8 @@ const videos = {
                 This input type is often used in registration forms, job applications, and file upload systems.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <label for="studentName">Student Name:</label>
                     <br>
@@ -1466,7 +1501,8 @@ const videos = {
                 It is useful for autocomplete and recommended choices.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <label for="name">Student Name:</label>
                     <br>
@@ -1495,6 +1531,7 @@ const videos = {
                     <input type="submit" value="Register">
 
                 </form>`,
+
         image: "../img/html 38.2.png"
     },
 
@@ -1506,7 +1543,8 @@ const videos = {
                 The max attribute specifies the total value or maximum progress.
                 `,
 
-        code: `<label>HTML Course Progress:</label>
+        code: `
+                <label>HTML Course Progress:</label>
                 <progress value="70" max="100"></progress>
                 `,
 
@@ -1522,7 +1560,8 @@ const videos = {
                 required makes date selection mandatory.
                 readonly allows the date to be viewed but not changed.`,
 
-        code: `<form>
+        code: `
+                <form>
                     <label for="dob">Date of Birth:</label>
 
                     <input type="date"
@@ -1547,7 +1586,8 @@ const videos = {
                 disabled disables the input field completely.
                 `,
 
-        code: ` <form>
+        code: ` 
+                <form>
 
                     <label for="week">Select Week:</label>
                     <input type="week" id="week">
@@ -1558,6 +1598,7 @@ const videos = {
                     <input type="week" id="disabledWeek" disabled>
 
                 </form>`,
+
         image: "../img/html 41.2.png"
     },
 
@@ -1569,7 +1610,8 @@ const videos = {
                 Users can choose a month without selecting a specific day.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                     <label for="month">Select Month:</label>
                     <input type="month" id="month">
@@ -1580,6 +1622,7 @@ const videos = {
                     <input type="month" id="disabledMonth" disabled>
 
                 </form>`,
+
         image: "../img/html 42.2.png"
     },
 
@@ -1589,7 +1632,8 @@ const videos = {
                 It includes built-in validation to reject non-numeric input.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
 
                 <label for="age">Enter Age:</label>
                 <input type="number" id="age" min="1" max="100">
@@ -1607,7 +1651,8 @@ const videos = {
         title: "HTML Tutorials – Input Type Range – Affordable Education For All – ChiPi Technologies",
         notes: `<input type="range"> creates a slider that allows users to select a numeric value within a specified range.
                `,
-        code: `<form>
+        code: `
+                <form>
 
                     <label for="volume">Volume:</label>
                     <input type="range" id="volume" min="0" max="100" value="50">
@@ -1629,7 +1674,8 @@ const videos = {
                 The legend appears at the top border of the fieldset.
                 `,
 
-        code: `<form>
+        code: `
+                <form>
                     <fieldset>
 
                         <legend>Student Information</legend>
@@ -1661,7 +1707,8 @@ const videos = {
                 These tags are useful for FAQs, help sections, and additional information.
                 `,
 
-        code: `<details>
+        code: `
+                <details>
                     <summary>
                         Show Class Guidelines
                     </summary>
@@ -1694,7 +1741,8 @@ const videos = {
                 <progress> is used for tracking progress, whereas range is used for collecting user input.
                 `,
 
-        code: `<body>
+        code: `
+                <body>
 
                     <h1>ChiPi Technologies - Student Dashboard</h1>
 
@@ -1727,7 +1775,8 @@ const videos = {
     48: {
         title: "HTML Tutorials Mini Project - How to create Contact Us Form - ChiPi Technologies",
         notes: "no notes for this video",
-        code: `<body>
+        code: `
+                <body>
 
                     <h1>ChiPi Technologies - Contact Us</h1>
 
@@ -1810,7 +1859,8 @@ const videos = {
     49: {
         title: "HTML Tutorials Mini Project - Develop Register User/Login Form - ChiPi Technologies",
         notes: "no notes for this video",
-        code: `<body>
+        code: `
+                <body>
                     <h1>ChiPi Technologies - Login / Sign-Up Form</h1>
 
                     <form>
@@ -1862,7 +1912,8 @@ const videos = {
     50: {
         title: "HTML Tutorials - Mini Project - Student Registration Form - ChiPi Technologies",
         notes: "no notes for this video",
-        code: `<body>
+        code: `
+                <body>
                     <h1>ChiPi Technologies - Student Registration Form</h1>
 
                     <form>
