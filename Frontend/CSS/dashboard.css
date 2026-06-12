@@ -15,15 +15,29 @@ body{
 .header{
     height: 80px;
     background-color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 0 30px;
+
     border-bottom: 2px solid #ddd;
 }
 
-.header h1{
-    color: #1e3a8a;
+.logo{
+    flex: 1;
+}
+
+.welcome{
+    flex: 1;
+    text-align: center;
+}
+
+.search-box{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .search-box input{

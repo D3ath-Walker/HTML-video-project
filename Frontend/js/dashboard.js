@@ -4,6 +4,18 @@ const videoTitle = document.getElementById("video-title");
 const videoNotes = document.getElementById("video-notes");
 const videoCode = document.getElementById("video-code");
 const outputImage = document.getElementById("output-image");
+const progressText = document.getElementById("progress-text");
+const completeCheckbox = document.getElementById("complete-checkbox");
+const welcomeText = document.getElementById("welcome-text");
+
+const studentName = localStorage.getItem("name");
+
+if(studentName){
+    welcomeText.textContent = `Welcome, ${studentName} 👋`;
+}
+
+let currentVideo = 0;
+let completedVideos = {};
 
 for(let i = 1; i <= 50; i++){
 
@@ -12,6 +24,8 @@ for(let i = 1; i <= 50; i++){
     li.textContent = `📘 HTML Video ${i}`;
 
     li.addEventListener("click", () => {
+
+        currentVideo = i;
 
         const video = videos[i];
 
@@ -38,3 +52,19 @@ for(let i = 1; i <= 50; i++){
 
     videoList.appendChild(li);
 }
+
+completeCheckbox.addEventListener("change", () => {
+
+    if(currentVideo === 0){
+        return;
+    }
+
+    completedVideos[currentVideo] = completeCheckbox.checked;
+
+    const totalCompleted =
+        Object.values(completedVideos)
+              .filter(value => value).length;
+
+    progressText.textContent =
+        `${totalCompleted} / 50 Videos Completed`;
+});
