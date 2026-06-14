@@ -147,16 +147,30 @@ button{
     margin-top: 25px;
     border: none;
     border-radius: 10px;
-    background: #e8c04b;
+    background: linear-gradient(135deg, #fc7311, #ffb347);
     color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 
+    box-shadow:
+        0 0 10px rgba(252,115,17,0.4),
+        0 0 20px rgba(252,115,17,0.2);
 }
 
 
 button:hover{
-    background: #16307a;
-    transition: 0.5s;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(252,115,17,0.7),
+        0 0 30px rgba(252,115,17,0.5),
+        0 0 45px rgba(252,115,17,0.3);
+
+    background: linear-gradient(135deg, #ff8c32, #ffc857);
+}
+
+button:active{
+    transform: translateY(1px);
 }
