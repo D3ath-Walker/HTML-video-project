@@ -7,15 +7,32 @@ const outputImage = document.getElementById("output-image");
 const progressText = document.getElementById("progress-text");
 const completeCheckbox = document.getElementById("complete-checkbox");
 const welcomeText = document.getElementById("welcome-text");
-
+const progressFill = document.getElementById("progress-fill");
 const studentName = localStorage.getItem("name");
+const searchInput = document.getElementById("search-input");
 
 if(studentName){
-    welcomeText.textContent = `Welcome, ${studentName} 👋`;
+    welcomeText.textContent = `Welcome, ${studentName} `;
 }
 
 let currentVideo = 0;
-let completedVideos = {};
+let completedVideos =
+    JSON.parse(
+        localStorage.getItem("completedVideos")
+    ) || {};
+
+const totalCompleted =
+    Object.values(completedVideos)
+          .filter(value => value).length;
+
+progressText.textContent =
+    `${totalCompleted} / 50 Videos Completed`;
+
+const percentage =
+    (totalCompleted / 50) * 100;
+
+progressFill.style.width =
+    `${percentage}%`;    
 
 for(let i = 1; i <= 50; i++){
 
@@ -26,6 +43,9 @@ for(let i = 1; i <= 50; i++){
     li.addEventListener("click", () => {
 
         currentVideo = i;
+
+        completeCheckbox.checked =
+        completedVideos[i] || false;
 
         const video = videos[i];
 
@@ -60,11 +80,45 @@ completeCheckbox.addEventListener("change", () => {
     }
 
     completedVideos[currentVideo] = completeCheckbox.checked;
+    localStorage.setItem("completedVideos",JSON.stringify(completedVideos));
+    const totalCompleted = Object.values(completedVideos).filter(value => value).length;
+    progressText.textContent = `${totalCompleted} / 50 Videos Completed`;
+    const percentage = (totalCompleted / 50) * 100;
+    progressFill.style.width = `${percentage}%`;    
 
-    const totalCompleted =
-        Object.values(completedVideos)
-              .filter(value => value).length;
+});
 
-    progressText.textContent =
-        `${totalCompleted} / 50 Videos Completed`;
+searchInput.addEventListener("input", () => {
+
+    const searchText =
+        searchInput.value.toLowerCase();
+
+    const videoItems =
+        document.querySelectorAll("#video-list li");
+
+    videoItems.forEach(video => {
+
+        const text =
+            video.textContent.toLowerCase();
+
+        if(text.includes(searchText)){
+
+            video.style.display = "block";
+        }
+        else{
+
+            video.style.display = "none";
+        }
+    });
+});
+
+const items = document.querySelectorAll('.video-list li');
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    // Deselect all items first
+    items.forEach(i => i.classList.remove('selected'));
+    // Select the clicked one
+    item.classList.add('selected');
+  });
 });

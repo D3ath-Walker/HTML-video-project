@@ -427,7 +427,25 @@ const videos = {
     13: {
         title: "Complete HTML tutorial - How to link multiple web pages in your website",
         notes: "no notes for this video",
-        code: "",
+        code: `
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <title> My First Page </title>
+                    </head>
+                    <body>
+                        <p> It contains study materials for learning html. </p>
+                        <p>
+                            <ul>
+                            <li><a href = "./AnchorTag.html">Anchor elements</a></li>
+                            <li><a href = "./HTMLtagsDemo.html">Text Formatting Elements</a></li>
+                            <li><a href = "./ListTags.html">Text Formatting Elements-Detailed</a></li>
+                            <li><a href = "./ListTypesDemo.html">Image Element</a></li>
+                            </ul>
+                        </p>
+                    </body>
+                </html>`,
+
         image:"../img/html 13.1.png"
     },
 

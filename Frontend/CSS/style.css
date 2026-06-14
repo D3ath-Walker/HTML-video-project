@@ -10,10 +10,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/lib.jpg");
+    background-image: url("../img/bo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    margin: 0;
 }
 
 .container{
@@ -25,22 +29,73 @@ body{
 }
 
 .form-box{
-    width: 450px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-color: #000000;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #2a0d04;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-.form-box h1{
-    text-align: center;
-    color: #e8c04b;
-    margin-bottom: 10px;
-    font-size: 2rem;
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
+
+.form-box::after, .form-box::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.form-box::before{
+  filter: blur(1.5rem);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.form-box h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff8c32;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px rgba(255,140,50,0.8),
+        0 0 15px rgba(255,140,50,0.6),
+        0 0 25px rgba(255,140,50,0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-box h1:hover{
+    text-shadow:
+        0 0 10px rgba(255,140,50,1),
+        0 0 20px rgba(255,140,50,0.8),
+        0 0 40px rgba(255,140,50,0.6);
+}
+
 
 .form-box p{
     text-align: center;
@@ -53,7 +108,12 @@ label{
     margin-bottom: 8px;
     margin-top: 15px;
     font-weight: bold;
-    color: whitesmoke;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px rgba(255,140,50,0.8),
+        0 0 15px rgba(255,140,50,0.6),
+        0 0 25px rgba(255,140,50,0.4);
 }
 
 input{
@@ -63,11 +123,18 @@ input{
     border-radius: 10px;
     outline: none;
     font-size: 15px;
+    
+}
+/* hover */
+input:hover{
+    transform: translateY(-5px) ;
+    transition: 0.3s ease;
 }
 
 input:hover{
-    background: #8cfd84;
-    transition: 0.5s;
+    background: #ffb362;
+    transform: translateY(-5px) ;
+    transition: 0.3s ease;
 }
 
 input:focus{
@@ -85,7 +152,7 @@ button{
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+
 }
 
 
