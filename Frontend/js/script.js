@@ -17,7 +17,7 @@ form.addEventListener("submit", async function(event){
     try{
 
         const response = await fetch(
-            "https://html-video-project.onrender.com/progress",
+            "https://html-video-project.onrender.com/students",
             {
                 method: "POST",
 
