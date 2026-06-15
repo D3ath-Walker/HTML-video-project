@@ -109,7 +109,7 @@ completeCheckbox.addEventListener("change", async () => {
                   .map(Number);
 
         await fetch(
-            "http://localhost:5000/progress",
+            "https://html-video-project.onrender.com/students",
             {
                 method: "POST",
 
