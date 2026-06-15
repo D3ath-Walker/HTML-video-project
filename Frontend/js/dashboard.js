@@ -9,6 +9,7 @@ const completeCheckbox = document.getElementById("complete-checkbox");
 const welcomeText = document.getElementById("welcome-text");
 const progressFill = document.getElementById("progress-fill");
 const studentName = localStorage.getItem("name");
+const studentEmail = localStorage.getItem("email");
 const searchInput = document.getElementById("search-input");
 
 if(studentName){
@@ -73,19 +74,61 @@ for(let i = 1; i <= 50; i++){
     videoList.appendChild(li);
 }
 
-completeCheckbox.addEventListener("change", () => {
+completeCheckbox.addEventListener("change", async () => {
 
     if(currentVideo === 0){
         return;
     }
 
-    completedVideos[currentVideo] = completeCheckbox.checked;
-    localStorage.setItem("completedVideos",JSON.stringify(completedVideos));
-    const totalCompleted = Object.values(completedVideos).filter(value => value).length;
-    progressText.textContent = `${totalCompleted} / 50 Videos Completed`;
-    const percentage = (totalCompleted / 50) * 100;
-    progressFill.style.width = `${percentage}%`;    
+    completedVideos[currentVideo] =
+        completeCheckbox.checked;
 
+    localStorage.setItem(
+        "completedVideos",
+        JSON.stringify(completedVideos)
+    );
+
+    const totalCompleted =
+        Object.values(completedVideos)
+              .filter(value => value).length;
+
+    progressText.textContent =
+        `${totalCompleted} / 50 Videos Completed`;
+
+    const percentage =
+        (totalCompleted / 50) * 100;
+
+    progressFill.style.width =
+        `${percentage}%`;
+
+    try{
+
+        const completedArray =
+            Object.keys(completedVideos)
+                  .filter(key => completedVideos[key])
+                  .map(Number);
+
+        await fetch(
+            "http://localhost:5000/progress",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    email: studentEmail,
+                    completedVideos: completedArray
+                })
+            }
+        );
+
+    }
+    catch(error){
+
+        console.log(error);
+    }
 });
 
 searchInput.addEventListener("input", () => {
