@@ -16,6 +16,9 @@ form.addEventListener("submit", async function(event){
 
     try{
 
+        // document.getElementById("loading-screen")
+        // .style.display = "flex";
+
         const response = await fetch(
             "https://html-video-project.onrender.com/students",
             {

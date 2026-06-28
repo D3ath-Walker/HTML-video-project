@@ -159,9 +159,9 @@ const items = document.querySelectorAll('.video-list li');
 
 items.forEach(item => {
   item.addEventListener('click', () => {
-    // Deselect all items first
+
     items.forEach(i => i.classList.remove('selected'));
-    // Select the clicked one
+
     item.classList.add('selected');
   });
 });

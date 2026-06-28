@@ -12,7 +12,6 @@ body{
 }
 
 
-/* ALL TEXT */
 #welcome-text{
     font-size: 28px;
     font-weight: 700;
@@ -41,7 +40,6 @@ body{
         0 0 25px rgba(255,140,50,0.4);
     transition: all 0.3s ease;
 }
-/* Header */
 
 .header{
     height: 80px;
@@ -78,17 +76,13 @@ body{
     border-radius: 8px;
 }
 
-/* Main Layout */
-
 .container{
     display: flex;
     height: calc(100vh - 80px);
 }
 
-/* Sidebar */
-
 .sidebar{
-    width: 280px;
+    width: 220px;
     background-color: #170601;
     padding: 20px;
     overflow-y: auto;
@@ -127,7 +121,7 @@ body{
   top: 0;
   border-radius: 10px;
 }
-/* glow */
+
 .video-list li::before {
   content: "";
   background: linear-gradient(
@@ -155,7 +149,6 @@ body{
   100% {background-position: 0 0;}
 }
 
-/* hover */
 .video-list li:hover{
     transform: translateY(-5px) ;
     transition: 0.3s ease;
@@ -178,7 +171,7 @@ body{
   font-weight: bold;
 }
 
-/* scrollbar */
+
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -200,14 +193,13 @@ body{
     border-radius: 999px;
 }
 
-/* Main Content */
+
 .content{
     flex: 1;
     padding: 25px;
     overflow-y: auto;
 }
 
-/* Progress Section */
 
 .progress-section{
   margin: 0 auto;
@@ -279,7 +271,6 @@ body{
     background-color: #68fc2d;
 }
 
-/* Video Content */
 
 .video-content{
   margin: 0 auto;
